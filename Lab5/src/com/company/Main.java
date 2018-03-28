@@ -60,7 +60,7 @@ public class Main extends File
 //        System.out.println(liczbyOdczyt + "\n");
         try {
             FileInputStream fileInputStream = new FileInputStream("C:/Users/Dajana/Documents/IO/Semestr VI/Rozproszona sztuczna " +
-                "inteligencja/Ćwiczenia/L5/Zmiennoprzecinkowe.txt");
+                "inteligencja/Ćwiczenia/Lab5/Zmiennoprzecinkowe.txt");
 
             // Odczytywanie jednego bajtu z pliku
             int b = fileInputStream.read();
@@ -98,21 +98,21 @@ public class Main extends File
         Scanner in = new Scanner(file);
 
         String odczytSerial = in.nextLine();
-        System.out.println(odczytSerial);
+        System.out.println(odczytSerial + "\n");
 
 
+        System.out.println("Sprawdzam tusz w drukarce...");
         // obsługa wyjątków - lab4
         boolean obecnoscTuszuDrukarki = false;       //tuszu nie ma
         try{
             if(obecnoscTuszuDrukarki){
-                System.out.println("Tusz obecny w drukarce przechodze do drukowania.");
+                System.out.println("Tusz obecny w drukarce, przechodze do drukowania...");
             }
             else {
-                System.out.println("Błąd.");
-                throw new MyException("Zgłoszenie braku tuszu w drukarce");
+                throw new MyException("Błąd -------> Zgłoszenie braku tuszu");
             }
         } catch (MyException ex) {
-                System.out.println(ex.toString());
+                System.out.println(ex);
         }
     }
 }
